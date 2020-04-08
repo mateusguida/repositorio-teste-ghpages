@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braxtec Finance Search</title>
+</head>
+<body>
+    <h3>Braxtec Finance Search</h3>
+
+    <label for="financesearch">Digite a ação</label>
+    <input type="text" id="financesearch"/>
+    <br/><br/>
+    <button onclick="fsearc();">Buscar Ações</button>
+
+    <script>
+        function fsearc(){
+            var acao = document.getElementById("financesearch").value
+           
+            var guiainv = "https://www.guiainvest.com.br/mural/" + acao + ".aspx"
+            window.open(guiainv, '_blank');
+
+            window.open(document.referrer,'_self');
+
+            var statusinv = "https://statusinvest.com.br/acoes/" + acao
+            window.open(statusinv, '_blank');
+
+            window.open(document.referrer,'_self');
+
+            var fundamentus = "https://www.fundamentus.com.br/detalhes.php?papel=" + acao
+            window.open(fundamentus, '_blank');
+
+        }
+    </script>
+
+</body>
+</html>
